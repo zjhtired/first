@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="en" ng-app="mo">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport"-->
+          <!--content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>-->
+    <title>闲鱼</title>
+    <link rel = "Shortcut Icon" href="img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="xianyu.css">
+
+    <link rel="stylesheet" href="iconfont.css">
+
+    <script src="../js/angular.js"></script>
+    <script src="../js/angular-route.js"></script>
+    <script src="route.js"></script>
+    <link rel="stylesheet" href="../swiper/swiper.css">
+    <script src="../swiper/swiper.js"></script>
+</head>
+<!--<script>-->
+<!--var app = angular.module("mo", ["ngRoute"])-->
+<!--app.controller("con", function ($scope) {-->
+<!--$scope.money=80;-->
+ <!--var mySwiper = new Swiper('.swiper-container', {-->
+     <!--autoplay: 2000,//可选选项，自动滑动-->
+     <!--autoplayDisableOnInteraction: false,-->
+     <!--loop: true,-->
+     <!--pagination: '.swiper-pagination',-->
+     <!--paginationClickable: true-->
+ <!--})-->
+<!--})</script>-->
+<!--////////////////////////////////////////////-->
+<body ng-controller="con">
+<header>
+    <h3>闲鱼</h3>
+    <p ng-class="'denglu'">
+        <a href="#">亲，请登录</a>
+        <span><a href="#">免费注册</a><span>
+    </p>
+    <p ng-class="'kefu'">
+        <a ng-href="https://login.taobao.com/member/login.jhtml">我的淘宝</a>
+        <a ng-href="https://login.taobao.com/member/login.jhtml">购物车</a>
+        <a ng-href="https://login.taobao.com/member/login.jhtml">收藏夹</a>
+        <a ng-href="#">卖家中心</a>
+        <a ng-href="#">联系客服</a>
+        <img ng-src="img/1_03.gif" id="k1">
+        <img ng-src="img/1_08.gif" id="k2">
+        <a ng-href="#">网站导航</a>
+        <img ng-src="img/1_05.gif" id="k3"></p>
+</header>
+<div class="nav">
+    <img src="img/xy (1).png" class="log">
+    <ul class="na">
+        <li><a href="#">首页</a></li>
+        <li><a href="#/phone">手机二手</a></li>
+        <li><a href="#/car">二手车股价</a></li>
+        <li><a href="#/drop">降降降</a></li>
+        <span>|</span>
+        <li><a href="#/issue">发布闲置</a></li>
+        <li><a href="#/me">我的闲置<img src="img/1_17.gif" id="nav1"></a></li>
+    </ul>
+
+</div>
+<!-- //////////////////////////////// -->
+<ng-view>
+<div class="min">
+    <div class="min-l">
+        <ul id="fenlei">
+            <li><img src="img/1-31.png">
+                <a href="#"><b>闲置数码</b>手机<span>相机</span>笔记本</a></li>
+            <li><img src="img/1_30.gif">
+                <a href="#"><b>闲置母婴</b>童装<span>宝宝用品</span>玩具</a></li>
+            <li><img src="img/1_32.gif">
+                <a href="#"><b>家居日用</b>家具<span>家纺</span>日用</a></li>
+            <li><img src="img/1_34.gif">
+                <a href="#"><b>影音家电</b>大家电<span>小家电</span>料理机</a></li>
+            <li><img src="img/1_36.gif">
+                <a href="#"><b>鞋服配饰</b>女装<span>女鞋</span>箱包</a></li>
+            <li><img src="img/1_38.gif">
+                <a href="#"><b>珠宝收藏</b>珠宝<span>饰品</span>艺术收藏</a></li>
+        </ul>
+    </div>
+
+    <div class="min-c">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/xy 6.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/xy 8.jpg" alt=""></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+    <!--<script >-->
+        <!--var mySwiper = new Swiper('.swiper-container', {-->
+            <!--autoplay: 2000,//可选选项，自动滑动-->
+            <!--autoplayDisableOnInteraction: false,-->
+            <!--loop: true,-->
+            <!--pagination: '.swiper-pagination',-->
+            <!--paginationClickable: true-->
+        <!--})-->
+    <!--</script>-->
+    <div class="min-r">
+        <div class="top">
+            <div class="left">
+                <h4>发布闲置</h4>
+                <img src="img/1_26.gif" id="fb">
+                <p>闲置还钱<span>快速出手</span></p>
+            </div>
+            <div class="right">
+                <h4>一键转卖</h4>
+                <img src="img/1_26.gif" id="fb">
+                <p>转卖已买到的宝贝</p>
+            </div>
+        </div>
+        <img src="img/xy (2).png">
+    </div>
+</div>
+
+
+<div class="hobby">
+    <div class="left">
+        <dl>
+            <dt><img src="img/xy (1).jpg" id="le"></dt>
+            <dd>Hi，wanglx0521</dd>
+            <dd class="xq">你可能感兴趣</dd>
+        </dl>
+        <ul id="xq1">
+            <li><a href="#">自行车</a></li>
+            <li><a href="#">iPad</a></li>
+            <li><a href="#">摩托车</a></li>
+            <li><a href="#">音响</a></li>
+            <li><a href="#">macbook</a></li>
+            <li><a href="#">机械表</a></li>
+        </ul>
+    </div>
+
+    <div class="center">
+        <ul class="ce">
+            <li><a href="#">猜你喜欢</a></li>
+            <li><a href="#">全新闲置</a></li>
+            <li><a href="#">同城交易</a></li>
+        </ul>
+        <dl id="xh1">
+            <dt><img src="img/xy(15).jpg" width="120" height="160"></dt>
+            <dd>海贝针织衫!</dd>
+        </dl>
+        <dl id="xh2">
+            <dt><img src="img/xy(12).jpg" width="160" height="120"></dt>
+            <dd>杯具</dd>
+        </dl>
+        <dl id="xh3">
+            <dt><img src="img/xy(13).jpg" width="160" height="160"></dt>
+            <dd>护肤品</dd>
+        </dl>
+        <dl id="xh4">
+            <dt><img src="img/xy(14).jpg" width="120" height="160"></dt>
+            <dd>卡通暖宝宝包邮</dd>
+        </dl>
+        <!--<dl id="xh5">-->
+        <!--<dt><img src="img/1_45.gif"></dt>-->
+        <!--<dd id="cs">是发生的发达</dd>-->
+        <!--<dd>按时发打发沙发是打发爱少点</dd>-->
+        <!--<dd id="cs1">¥<span>299</span></dd>-->
+        <!--</dl>  -->
+        <!--<dl id="xh5" style="margin-top:12px">-->
+        <!--<dt><img src="img/1_45.gif"></dt>-->
+        <!--<dd id="cs">是发生的发达</dd>-->
+        <!--<dd>按时发打发沙发是打发爱少点</dd>-->
+        <!--<dd id="cs1">¥<span>299</span></dd>-->
+        <!--</dl>                 -->
+    </div>
+</div>
+<div class="kind">
+    <h2><span>|</span>数码控.3C也性感</h2>
+    <div class="list">
+        <div class="cloud">
+            <a href="">显示器</a>
+            <a href="">内存</a>
+            <a href="">主板</a>
+            <a href="">硬盘</a>
+            <a href="">CPU</a>
+            <a href="">显卡</a>
+            <a href="">平板</a>
+            <a href="">无线路由器</a>
+            <a href="">笔记本</a>
+            <a href="">无线鼠标</a>
+            <a href="">充电宝</a>
+            <a href="">移动硬盘</a>
+            <a href="">数据线</a>
+        </div>
+        <div class="pic">
+            <a href=""><img src="img/shm(1).jpg" alt="" width="106" height="142"><br/><span>盈通 GT730 显卡</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(2).jpg" alt="" width="106" height="142"><br/><span>包邮skullcandy耳机</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(3).jpg" alt="" width="142" height="142"><br/><span>超靓全新oppo R9s</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(4).jpg" alt="" width="106" height="142"><br/><span>罗技570</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(5).jpg" alt="" width="106" height="142"><br/><span>全新富士Pro2正品相机</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+        </div>
+        <div class="listen">
+            <a href=""><img src="img/shm(1).png" alt=""></a>
+            <h5>戴上耳机,倾听</h5>
+            <p class="desc">
+                想要暂时告别千篇一律的生活，踏上没有目的的旅途？记得在行囊里捎上自己心爱的耳机和音乐，有了它们，一路上，不寂寞。
+            </p>
+        </div>
+        <div class="cloud">
+        <img src="img/shm(2).png" alt="">
+        </div>
+        <div class="pic">
+            <a href=""><img src="img/shm(1).jpg" alt="" width="106" height="142"><br/><span>盈通 GT730 显卡</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(2).jpg" alt="" width="106" height="142"><br/><span>包邮skullcandy耳机</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(3).jpg" alt="" width="142" height="142"><br/><span>超靓全新oppo R9s</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(4).jpg" alt="" width="106" height="142"><br/><span>罗技570</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(5).jpg" alt="" width="106" height="142"><br/><span>全新富士Pro2正品相机</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+        </div>
+        <div class="listen">
+            <a href=""><img src="img/shm(3).png" alt=""></a>
+            <h5>最顺手的那只鼠标</h5>
+            <p class="desc">
+                想要暂时告别千篇一律的生活，踏上没有目的的旅途？记得在行囊里捎上自己心爱的耳机和音乐，有了它们，一路上，不寂寞。
+            </p>
+        </div>
+    </div>
+</div>
+<!--/*/////////////////////////////////////////////////*/-->
+<div class="bud">
+    <h2><span>|</span>辣妈爱萌宝</h2>
+    <div class="baby">
+        <ul class="item">
+            <li><a href=""><img src="img/mb(1).jpg" alt=""><br/><span>婴儿车，高观景婴儿推车</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(2).jpg" alt=""><br/><span>小象</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(3).jpg" alt=""><br/><span>专柜正品女童连衣裙外套</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(4).jpg" alt=""><br/><span>冰雪公主智能娃娃女孩玩具</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(5).jpg" alt=""><br/><span>韩国儿童婚纱裙 品质超好</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(6).jpg" alt=""><br/><span>贝恩施 电子琴</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(7).jpg" alt=""><br/><span>优合吸力大电动吸奶器</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(8).jpg" alt=""><br/><span>一套60</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+        </ul>
+       <div class="hots">
+           <div class="tags">
+               <a href="">婴儿床</a><span>|</span>
+               <a href="">推车</a><span>|</span>
+               <a href="">腰凳背带</a><span>|</span>
+               <a href="">安全座椅</a>
+               <a href="">学步车</a><span>|</span>
+               <a href="">早教玩具</a><span>|</span>
+               <a href="">宝宝鞋</a><span>|</span>
+               <a href="">健身器</a>
+               <a href="">电动玩具</a><span>|</span>
+               <a href="">益智玩具</a><span>|</span>
+               <a href="">游泳池</a><span>|</span>
+               <a href="">儿童自行车</a>
+               <a href="">托腹裤</a><span>|</span>
+               <a href="">孕妇文胸</a><span>|</span>
+               <a href="">丽婴房全新闲置</a>
+           </div>
+           <div class="theme">
+               <div class="thepic">
+               <img src="img/mb(9).jpg" alt="">
+               </div>
+               <div class="des">
+               <h5>什么值得买—宝宝安全座椅篇</h5>
+               <p class="desc">
+                   从宝宝出生，就盼着他快快长大，好实现一家人自驾游玩的愿望。安全是一切享受的前提。一个好的安全座椅，可以保护孩子一路的安全。爱他就让他安全。
+               </p></div>
+
+               <div class="thepic">
+                   <img src="img/mb(10).jpg" alt="">
+               </div>
+               <div class="des">
+                   <h5>让小宝天天有惊喜</h5>
+                   <p class="desc">
+                       每次下班到家宝宝都会说：“麻麻，玩具”。想每天给宝宝一件不同的玩具吗？来这里可以买，可以换，听你的。
+                   </p></div>
+       </div>
+    </div>
+
+</div>
+</div>
+<!--//////////////////////////////////-->
+<div class="kind">
+    <h2><span>|</span>爱摄影≠穷三代</h2>
+    <div class="list">
+        <div class="cloud">
+            <a href="">单反</a>
+            <a href="">镜头</a>
+            <a href="">闪光灯</a>
+            <a href="">三脚架</a>
+            <a href="">相机包</a>
+            <a href="">美颜神器</a>
+            <a href="">卡西欧</a>
+            <a href="">拍立得</a>
+            <a href="">摄像机</a>
+            <a href="">卡片机</a>
+            <a href="">长焦</a>
+            <a href="">广角</a>
+            <a href="">防抖</a>
+            <a href="">变焦</a>
+            <a href="">单反内胆包</a>
+        </div>
+        <div class="pic">
+            <a href=""><img src="img/shm(1).jpg" alt="" width="106" height="142"><br/><span>盈通 GT730 显卡</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(2).jpg" alt="" width="106" height="142"><br/><span>包邮skullcandy耳机</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(3).jpg" alt="" width="142" height="142"><br/><span>超靓全新oppo R9s</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(4).jpg" alt="" width="106" height="142"><br/><span>罗技570</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(5).jpg" alt="" width="106" height="142"><br/><span>全新富士Pro2正品相机</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+        </div>
+        <div class="listen">
+            <a href=""><img src="img/shm(1).png" alt=""></a>
+            <h5>微单,随时随地</h5>
+            <p class="desc">
+                微单：微，微型小巧；单，单反画质。想要记录下旅途中每一道靓丽风景，却不想背负沉重的行囊上路——不如选择微单吧！
+            </p>
+        </div>
+        <div class="cloud">
+            <img src="img/df(1).png" alt="">
+        </div>
+        <div class="pic">
+            <a href=""><img src="img/shm(1).jpg" alt="" width="106" height="142"><br/><span>盈通 GT730 显卡</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(2).jpg" alt="" width="106" height="142"><br/><span>包邮skullcandy耳机</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(3).jpg" alt="" width="142" height="142"><br/><span>超靓全新oppo R9s</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(4).jpg" alt="" width="106" height="142"><br/><span>罗技570</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(5).jpg" alt="" width="106" height="142"><br/><span>全新富士Pro2正品相机</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+        </div>
+        <div class="listen">
+            <a href=""><img src="img/shm(3).png" alt=""></a>
+            <h5>二手镜头换着玩儿</h5>
+            <p class="desc">
+                我不是器材控，但，我相信不同的镜头，会带我们去发现不一样的风景…… 交换镜头，分享彼此曾经看见的美丽新世界。
+            </p>
+        </div>
+    </div>
+</div>
+<!--/////////////////////////////////////////-->
+<div class="bud">
+    <h2><span>|</span>爱美扮靓 悦己悦人</h2>
+    <div class="baby">
+        <ul class="item">
+            <li><a href=""><img src="img/mb(1).jpg" alt=""><br/><span>婴儿车，高观景婴儿推车</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(2).jpg" alt=""><br/><span>小象</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(3).jpg" alt=""><br/><span>专柜正品女童连衣裙外套</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(4).jpg" alt=""><br/><span>冰雪公主智能娃娃女孩玩具</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(5).jpg" alt=""><br/><span>韩国儿童婚纱裙 品质超好</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(6).jpg" alt=""><br/><span>贝恩施 电子琴</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(7).jpg" alt=""><br/><span>优合吸力大电动吸奶器</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(8).jpg" alt=""><br/><span>一套60</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+        </ul>
+        <div class="hots">
+            <div class="tags">
+                <a href="">眼影 </a><span>|</span>
+                <a href="">眼线</a><span>|</span>
+                <a href="">睫毛膏</a><span>|</span>
+                <a href="">假睫毛</a><span>|</span>
+                <a href="">BB霜</a>
+                <a href="">隔离</a><span>|</span>
+                <a href="">遮瑕</a><span>|</span>
+                <a href="">粉饼</a><span>|</span>
+                <a href="">腮红</a><span>|</span>
+                <a href="">散粉</a>
+                <a href="">卸妆</a><span>|</span>
+                <a href="">唇膏</a><span>|</span>
+                <a href="">唇彩</a><span>|</span>
+                <a href="">唇蜜</a><span>|</span>
+                <a href="">修颜</a>
+                <a href="">眉笔</a><span>|</span>
+                <a href="">化妆刷</a><span>|</span>
+                <a href="">阴影粉</a><span>|</span>
+                <a href="">防晒</a><span>|</span>
+                <a href="">化妆水</a><span>|</span>
+                <a href="">乳液</a>
+            </div>
+            <div class="theme">
+                <div class="thepic">
+                    <img src="img/am(1).png" alt="">
+                </div>
+                <div class="des">
+                    <h5>小样转让</h5>
+                    <p class="desc">
+                        谁家又出了新产品？谁家的美妆系列又让你眼花缭乱长草不已？可是，还不确定哪个适合呢...大都价格不菲呢... 别担心，不妨试试小样咯！
+                    </p></div>
+
+                <div class="thepic">
+                    <img src="img/am(2).png" alt="">
+                </div>
+                <div class="des">
+                    <h5>夏日香气</h5>
+                    <p class="desc">
+                        爱上一种香香的狂颠 深深崇拜 深深迷恋 深深沉醉 —— 从今天起，不过没有味道的生活，跟香水瓶子住在一起！
+                    </p></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--///////////////////////////-->
+<div class="kind">
+    <h2><span>|</span>再见老乔,我还是果粉</h2>
+    <div class="list">
+        <div class="cloud">
+            <a href="">单反</a>
+            <a href="">镜头</a>
+            <a href="">闪光灯</a>
+            <a href="">三脚架</a>
+            <a href="">相机包</a>
+            <a href="">美颜神器</a>
+            <a href="">卡西欧</a>
+            <a href="">拍立得</a>
+            <a href="">摄像机</a>
+            <a href="">卡片机</a>
+            <a href="">长焦</a>
+            <a href="">广角</a>
+            <a href="">防抖</a>
+            <a href="">变焦</a>
+            <a href="">单反内胆包</a>
+        </div>
+        <div class="pic">
+            <a href=""><img src="img/shm(1).jpg" alt="" width="106" height="142"><br/><span>盈通 GT730 显卡</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(2).jpg" alt="" width="106" height="142"><br/><span>包邮skullcandy耳机</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(3).jpg" alt="" width="142" height="142"><br/><span>超靓全新oppo R9s</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(4).jpg" alt="" width="106" height="142"><br/><span>罗技570</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(5).jpg" alt="" width="106" height="142"><br/><span>全新富士Pro2正品相机</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+        </div>
+        <div class="listen">
+            <a href=""><img src="img/shm(1).png" alt=""></a>
+            <h5>微单,随时随地</h5>
+            <p class="desc">
+                微单：微，微型小巧；单，单反画质。想要记录下旅途中每一道靓丽风景，却不想背负沉重的行囊上路——不如选择微单吧！
+            </p>
+        </div>
+        <div class="cloud">
+            <img src="img/df(1).png" alt="">
+        </div>
+        <div class="pic">
+            <a href=""><img src="img/shm(1).jpg" alt="" width="106" height="142"><br/><span>盈通 GT730 显卡</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(2).jpg" alt="" width="106" height="142"><br/><span>包邮skullcandy耳机</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(3).jpg" alt="" width="142" height="142"><br/><span>超靓全新oppo R9s</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(4).jpg" alt="" width="106" height="142"><br/><span>罗技570</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(5).jpg" alt="" width="106" height="142"><br/><span>全新富士Pro2正品相机</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+        </div>
+        <div class="listen">
+            <a href=""><img src="img/shm(3).png" alt=""></a>
+            <h5>二手镜头换着玩儿</h5>
+            <p class="desc">
+                我不是器材控，但，我相信不同的镜头，会带我们去发现不一样的风景…… 交换镜头，分享彼此曾经看见的美丽新世界。
+            </p>
+        </div>
+    </div>
+</div>
+<!--/////////////////////////////////////////////-->
+<div class="bud">
+    <h2><span>|</span>走出家门 回归自然</h2>
+    <div class="baby">
+        <ul class="item">
+            <li><a href=""><img src="img/mb(1).jpg" alt=""><br/><span>婴儿车，高观景婴儿推车</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(2).jpg" alt=""><br/><span>小象</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(3).jpg" alt=""><br/><span>专柜正品女童连衣裙外套</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(4).jpg" alt=""><br/><span>冰雪公主智能娃娃女孩玩具</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(5).jpg" alt=""><br/><span>韩国儿童婚纱裙 品质超好</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(6).jpg" alt=""><br/><span>贝恩施 电子琴</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(7).jpg" alt=""><br/><span>优合吸力大电动吸奶器</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(8).jpg" alt=""><br/><span>一套60</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+        </ul>
+        <div class="hots">
+            <div class="tags">
+                <a href="">眼影 </a><span>|</span>
+                <a href="">眼线</a><span>|</span>
+                <a href="">睫毛膏</a><span>|</span>
+                <a href="">假睫毛</a><span>|</span>
+                <a href="">BB霜</a>
+                <a href="">隔离</a><span>|</span>
+                <a href="">遮瑕</a><span>|</span>
+                <a href="">粉饼</a><span>|</span>
+                <a href="">腮红</a><span>|</span>
+                <a href="">散粉</a>
+                <a href="">卸妆</a><span>|</span>
+                <a href="">唇膏</a><span>|</span>
+                <a href="">唇彩</a><span>|</span>
+                <a href="">唇蜜</a><span>|</span>
+                <a href="">修颜</a>
+                <a href="">眉笔</a><span>|</span>
+                <a href="">化妆刷</a><span>|</span>
+                <a href="">阴影粉</a><span>|</span>
+                <a href="">防晒</a><span>|</span>
+                <a href="">化妆水</a><span>|</span>
+                <a href="">乳液</a>
+            </div>
+            <div class="theme">
+                <div class="thepic">
+                    <img src="img/am(1).png" alt="">
+                </div>
+                <div class="des">
+                    <h5>小样转让</h5>
+                    <p class="desc">
+                        谁家又出了新产品？谁家的美妆系列又让你眼花缭乱长草不已？可是，还不确定哪个适合呢...大都价格不菲呢... 别担心，不妨试试小样咯！
+                    </p></div>
+
+                <div class="thepic">
+                    <img src="img/am(2).png" alt="">
+                </div>
+                <div class="des">
+                    <h5>夏日香气</h5>
+                    <p class="desc">
+                        爱上一种香香的狂颠 深深崇拜 深深迷恋 深深沉醉 —— 从今天起，不过没有味道的生活，跟香水瓶子住在一起！
+                    </p></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--///////////////////////////////////////-->
+<div class="bud">
+    <h2><span>|</span>运动男女.深呼吸</h2>
+    <div class="baby">
+        <ul class="item">
+            <li><a href=""><img src="img/mb(1).jpg" alt=""><br/><span>婴儿车，高观景婴儿推车</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(2).jpg" alt=""><br/><span>小象</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(3).jpg" alt=""><br/><span>专柜正品女童连衣裙外套</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(4).jpg" alt=""><br/><span>冰雪公主智能娃娃女孩玩具</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(5).jpg" alt=""><br/><span>韩国儿童婚纱裙 品质超好</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(6).jpg" alt=""><br/><span>贝恩施 电子琴</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(7).jpg" alt=""><br/><span>优合吸力大电动吸奶器</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(8).jpg" alt=""><br/><span>一套60</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+        </ul>
+        <div class="hots">
+            <div class="tags">
+                <a href="">眼影 </a><span>|</span>
+                <a href="">眼线</a><span>|</span>
+                <a href="">睫毛膏</a><span>|</span>
+                <a href="">假睫毛</a><span>|</span>
+                <a href="">BB霜</a>
+                <a href="">隔离</a><span>|</span>
+                <a href="">遮瑕</a><span>|</span>
+                <a href="">粉饼</a><span>|</span>
+                <a href="">腮红</a><span>|</span>
+                <a href="">散粉</a>
+                <a href="">卸妆</a><span>|</span>
+                <a href="">唇膏</a><span>|</span>
+                <a href="">唇彩</a><span>|</span>
+                <a href="">唇蜜</a><span>|</span>
+                <a href="">修颜</a>
+                <a href="">眉笔</a><span>|</span>
+                <a href="">化妆刷</a><span>|</span>
+                <a href="">阴影粉</a><span>|</span>
+                <a href="">防晒</a><span>|</span>
+                <a href="">化妆水</a><span>|</span>
+                <a href="">乳液</a>
+            </div>
+            <div class="theme">
+                <div class="thepic">
+                    <img src="img/am(1).png" alt="">
+                </div>
+                <div class="des">
+                    <h5>小样转让</h5>
+                    <p class="desc">
+                        谁家又出了新产品？谁家的美妆系列又让你眼花缭乱长草不已？可是，还不确定哪个适合呢...大都价格不菲呢... 别担心，不妨试试小样咯！
+                    </p></div>
+
+                <div class="thepic">
+                    <img src="img/am(2).png" alt="">
+                </div>
+                <div class="des">
+                    <h5>夏日香气</h5>
+                    <p class="desc">
+                        爱上一种香香的狂颠 深深崇拜 深深迷恋 深深沉醉 —— 从今天起，不过没有味道的生活，跟香水瓶子住在一起！
+                    </p></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--////////////////////////////////-->
+<div class="kind">
+    <h2><span>|</span>以车代步</h2>
+    <div class="list">
+        <div class="cloud">
+            <a href="">单反</a>
+            <a href="">镜头</a>
+            <a href="">闪光灯</a>
+            <a href="">三脚架</a>
+            <a href="">相机包</a>
+            <a href="">美颜神器</a>
+            <a href="">卡西欧</a>
+            <a href="">拍立得</a>
+            <a href="">摄像机</a>
+            <a href="">卡片机</a>
+            <a href="">长焦</a>
+            <a href="">广角</a>
+            <a href="">防抖</a>
+            <a href="">变焦</a>
+            <a href="">单反内胆包</a>
+        </div>
+        <div class="pic">
+            <a href=""><img src="img/shm(1).jpg" alt="" width="106" height="142"><br/><span>盈通 GT730 显卡</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(2).jpg" alt="" width="106" height="142"><br/><span>包邮skullcandy耳机</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(3).jpg" alt="" width="142" height="142"><br/><span>超靓全新oppo R9s</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(4).jpg" alt="" width="106" height="142"><br/><span>罗技570</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(5).jpg" alt="" width="106" height="142"><br/><span>全新富士Pro2正品相机</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+        </div>
+        <div class="listen">
+            <a href=""><img src="img/shm(1).png" alt=""></a>
+            <h5>微单,随时随地</h5>
+            <p class="desc">
+                微单：微，微型小巧；单，单反画质。想要记录下旅途中每一道靓丽风景，却不想背负沉重的行囊上路——不如选择微单吧！
+            </p>
+        </div>
+        <div class="cloud">
+            <img src="img/df(1).png" alt="">
+        </div>
+        <div class="pic">
+            <a href=""><img src="img/shm(1).jpg" alt="" width="106" height="142"><br/><span>盈通 GT730 显卡</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(2).jpg" alt="" width="106" height="142"><br/><span>包邮skullcandy耳机</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(3).jpg" alt="" width="142" height="142"><br/><span>超靓全新oppo R9s</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(4).jpg" alt="" width="106" height="142"><br/><span>罗技570</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(5).jpg" alt="" width="106" height="142"><br/><span>全新富士Pro2正品相机</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+        </div>
+        <div class="listen">
+            <a href=""><img src="img/shm(3).png" alt=""></a>
+            <h5>二手镜头换着玩儿</h5>
+            <p class="desc">
+                我不是器材控，但，我相信不同的镜头，会带我们去发现不一样的风景…… 交换镜头，分享彼此曾经看见的美丽新世界。
+            </p>
+        </div>
+    </div>
+</div>
+<!--///////////////////////////////////////-->
+<div class="bud">
+    <h2><span>|</span>汪星人喵星人 都是爱宠星人</h2>
+    <div class="baby">
+        <ul class="item">
+            <li><a href=""><img src="img/mb(1).jpg" alt=""><br/><span>婴儿车，高观景婴儿推车</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(2).jpg" alt=""><br/><span>小象</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(3).jpg" alt=""><br/><span>专柜正品女童连衣裙外套</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(4).jpg" alt=""><br/><span>冰雪公主智能娃娃女孩玩具</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(5).jpg" alt=""><br/><span>韩国儿童婚纱裙 品质超好</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(6).jpg" alt=""><br/><span>贝恩施 电子琴</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(7).jpg" alt=""><br/><span>优合吸力大电动吸奶器</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+            <li><a href=""><img src="img/mb(8).jpg" alt=""><br/><span>一套60</span></a><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></li>
+        </ul>
+        <div class="hots">
+            <div class="tags">
+                <a href="">眼影 </a><span>|</span>
+                <a href="">眼线</a><span>|</span>
+                <a href="">睫毛膏</a><span>|</span>
+                <a href="">假睫毛</a><span>|</span>
+                <a href="">BB霜</a>
+                <a href="">隔离</a><span>|</span>
+                <a href="">遮瑕</a><span>|</span>
+                <a href="">粉饼</a><span>|</span>
+                <a href="">腮红</a><span>|</span>
+                <a href="">散粉</a>
+                <a href="">卸妆</a><span>|</span>
+                <a href="">唇膏</a><span>|</span>
+                <a href="">唇彩</a><span>|</span>
+                <a href="">唇蜜</a><span>|</span>
+                <a href="">修颜</a>
+                <a href="">眉笔</a><span>|</span>
+                <a href="">化妆刷</a><span>|</span>
+                <a href="">阴影粉</a><span>|</span>
+                <a href="">防晒</a><span>|</span>
+                <a href="">化妆水</a><span>|</span>
+                <a href="">乳液</a>
+            </div>
+            <div class="theme">
+                <div class="thepic">
+                    <img src="img/am(1).png" alt="">
+                </div>
+                <div class="des">
+                    <h5>小样转让</h5>
+                    <p class="desc">
+                        谁家又出了新产品？谁家的美妆系列又让你眼花缭乱长草不已？可是，还不确定哪个适合呢...大都价格不菲呢... 别担心，不妨试试小样咯！
+                    </p></div>
+
+                <div class="thepic">
+                    <img src="img/am(2).png" alt="">
+                </div>
+                <div class="des">
+                    <h5>夏日香气</h5>
+                    <p class="desc">
+                        爱上一种香香的狂颠 深深崇拜 深深迷恋 深深沉醉 —— 从今天起，不过没有味道的生活，跟香水瓶子住在一起！
+                    </p></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--///////////////////////////////////-->
+<div class="kind">
+    <h2><span>|</span>收藏.见证历史</h2>
+    <div class="list">
+        <div class="cloud">
+            <a href="">单反</a>
+            <a href="">镜头</a>
+            <a href="">闪光灯</a>
+            <a href="">三脚架</a>
+            <a href="">相机包</a>
+            <a href="">美颜神器</a>
+            <a href="">卡西欧</a>
+            <a href="">拍立得</a>
+            <a href="">摄像机</a>
+            <a href="">卡片机</a>
+            <a href="">长焦</a>
+            <a href="">广角</a>
+            <a href="">防抖</a>
+            <a href="">变焦</a>
+            <a href="">单反内胆包</a>
+        </div>
+        <div class="pic">
+            <a href=""><img src="img/shm(1).jpg" alt="" width="106" height="142"><br/><span>盈通 GT730 显卡</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(2).jpg" alt="" width="106" height="142"><br/><span>包邮skullcandy耳机</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(3).jpg" alt="" width="142" height="142"><br/><span>超靓全新oppo R9s</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(4).jpg" alt="" width="106" height="142"><br/><span>罗技570</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(5).jpg" alt="" width="106" height="142"><br/><span>全新富士Pro2正品相机</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+        </div>
+        <div class="listen">
+            <a href=""><img src="img/shm(1).png" alt=""></a>
+            <h5>微单,随时随地</h5>
+            <p class="desc">
+                微单：微，微型小巧；单，单反画质。想要记录下旅途中每一道靓丽风景，却不想背负沉重的行囊上路——不如选择微单吧！
+            </p>
+        </div>
+        <div class="cloud">
+            <img src="img/df(1).png" alt="">
+        </div>
+        <div class="pic">
+            <a href=""><img src="img/shm(1).jpg" alt="" width="106" height="142"><br/><span>盈通 GT730 显卡</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(2).jpg" alt="" width="106" height="142"><br/><span>包邮skullcandy耳机</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(3).jpg" alt="" width="142" height="142"><br/><span>超靓全新oppo R9s</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(4).jpg" alt="" width="106" height="142"><br/><span>罗技570</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+            <a href=""><img src="img/shm(5).jpg" alt="" width="106" height="142"><br/><span>全新富士Pro2正品相机</span><br/><b ng-class="'mo'">{{money|currency:'￥':2}}</b></a>
+        </div>
+        <div class="listen">
+            <a href=""><img src="img/shm(3).png" alt=""></a>
+            <h5>二手镜头换着玩儿</h5>
+            <p class="desc">
+                我不是器材控，但，我相信不同的镜头，会带我们去发现不一样的风景…… 交换镜头，分享彼此曾经看见的美丽新世界。
+            </p>
+        </div>
+    </div>
+</div></ng-view>
+<!--//////////////////////////////////////-->
+<div class="links">
+    <p><i class="iconfont icon-shimingrenzheng"></i><br><span>卖家实名认证</span></p>
+    <p><i class="iconfont icon-zhifubao"></i><br><span>支付宝担保交易</span></p>
+    <p><i class="iconfont icon-29"></i><br><span>专业团队支撑</span></p>
+    <p><i class="iconfont icon-weibo"><br></i><span>官方微博</span></p>
+</div>
+<div class="foot">
+
+        <span><a href="">合作伙伴</a></span>
+        <span><a href="">营销中心</a></span>
+        <span><a href="">廉正举报</a></span>
+        <span><a href="">联系客服</a></span>
+        <span><a href="">开放平台</a></span>
+        <span><a href="">诚征英才</a></span>
+        <span><a href="">联系我们</a></span>
+        <span><a href="">网站地图</a></span>
+        <span><a href="">法律声明及隐私权政策</a></span>
+        <span><a href="">知识产权</a></span>
+        <span>|</span>
+        <span>2003-2016 Taobao.com 版权所有</span>
+
+</div>
+
+</body>
+</html>
